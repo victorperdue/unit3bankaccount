@@ -28,7 +28,7 @@ const transactionsSlice = createSlice({
   initialState,
   reducers: {
     withdrawal: (state, { payload }) => {
-      state.balance += payload.amount;
+      state.balance -= payload.amount;
       state.history.push({
         type: "withdrawal",
         amount: payload.amount,
